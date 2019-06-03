@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container border py-4 px-4 dveri">
+		<div class="row">
+			<div class="col-4">
+				<img src="door.png" alt="" class="w-100 dver1" height="500px;">
+			</div>
+			<div class="col-4">
+				<img src="door2.png" alt=""  class="w-100 dver2" height="500px;">
+			</div>
+			<div class="col-4">
+				<img src="door3.png" alt="" class="w-10- dver3" height="500px;">
+			</div>
+		</div>		
+	</div>
+	<div class=" col-12 hogvarts text-white" style=" background-image: url(bg.jpg); height: 800px; background-size: 100% 100%; display: none;">
+		<h2>Найди все вещи Гарри Поттера</h2>
+		<h1 class="point">0</h1>
+		<button class="butt">Выйти из игры</button>
+		<div class="col-1">
+			<img src="ring.png" alt="" class="w-25 invis1" style="position: absolute; margin-left: 800px; margin-top: -80px; display: block;">
+		</div>
+		<div class="col-1">
+			<img src="gun.png" alt="" class="w-50 gun" style="position: absolute; margin-left: 500px; margin-top: 200px;">
+		</div>
+		<div class="col-1">
+			<img src="mantiya.png" alt="" class="w-25 invis2" style="position: absolute; margin-left: 400px; margin-top: 300px;">
+		</div>
+		<div class="col-1">
+			<img src="metla.png" alt="" class="w-25 invis3" style="position: absolute; margin-left:100px; margin-top: 100px;">
+		</div>
+		
+	</div>
+	<div class=" col-12 moya text-white" style=" background-image: url(bg3.jpg); height: 800px; background-size: 100% 100%; display: none;">
+		<h2>Найди все вещи</h2>
+		<h1 class="point">0</h1>
+		<button class="butt">Выйти из игры</button>
+		<div class="col-1">
+			<img src="ring.png" alt="" class="w-25 invis1" style="position: absolute; margin-left: 800px; margin-top: -80px; display: block;">
+		</div>
+		<div class="col-1">
+			<img src="gun.png" alt="" class="w-50 gun" style="position: absolute; margin-left: 500px; margin-top: 200px;">
+		</div>
+		<div class="col-1">
+			<img src="mantiya.png" alt="" class="w-25 invis2" style="position: absolute; margin-left: 400px; margin-top: 300px;">
+		</div>
+		<div class="col-1">
+			<img src="metla.png" alt="" class="w-25 invis3" style="position: absolute; margin-left:100px; margin-top: 100px;">
+		</div>		
+	</div>
+	<script type="text/javascript">
+		let score = 0;
+
+
+		document.querySelector(".dver1").onclick = function(){
+			alert("добро пожаловать в Хогвартс")
+			document.querySelector(".dveri").style.display = "none"
+			document.querySelector(".hogvarts").style.display = "block"
+		}	
+		document.querySelector(".dver2").onclick = function(){
+			alert("добро пожаловать на мою локацию.")
+			document.querySelector(".dveri").style.display = "none"
+			document.querySelector(".moya").style.display = "block"
+		}	
+		document.querySelector(".dver3").onclick = function(){
+			alert("Дверь закрыта")
+		}	
+		document.querySelector(".butt").onclick = function(){
+			alert("не уходи")
+			document.querySelector(".hogvarts").style.display = "none"
+			document.querySelector(".dveri").style.display = "block"
+		}
+		document.querySelector(".invis1").onclick = function(){
+			document.querySelector(".invis1").style.display = "none"; 
+			score  = score  + 1;
+			document.querySelector(".point").innerHTML = score;	
+		}	
+		document.querySelector(".invis2").onclick = function(){
+			document.querySelector(".invis2").style.display = "none";
+			score  = score  + 1;
+			document.querySelector(".point").innerHTML = score ;
+		}	
+		document.querySelector(".invis3").onclick = function(){
+			document.querySelector(".invis3").style.display = "none";
+			score  = score  + 1;
+			document.querySelector(".point").innerHTML = score;
+		}
+		document.querySelector(".gun").onclick = function(){
+			alert("нет")
+		}
+
+	</script>
+</body>
+</html>
